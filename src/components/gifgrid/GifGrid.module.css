@@ -1,0 +1,27 @@
+.cardContent{
+  width: 1200px;
+  margin: auto;
+  columns: 4;
+  column-gap: 7px;
+}
+@media(max-width: 1200px){
+  .cardContent{
+    columns: 3;
+    width: 100%;
+  }
+}
+@media(max-width: 768px)
+{
+  .cardContent{
+    columns: 2;
+  }
+}
+@media(max-width: 480px)
+{
+  .cardContent{
+    columns: 1;
+  }
+}
+.searchMatch{
+  @apply mt-2 mb-1 flex items-center justify-end text-primary;
+}

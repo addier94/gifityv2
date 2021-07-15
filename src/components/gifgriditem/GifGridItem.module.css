@@ -1,0 +1,29 @@
+.cardImg{
+  width: 100%;
+  transition: .3s ease-in-out;
+}
+.card{
+  @apply relative mb-2 overflow-hidden;
+}
+.card:hover .cardImg{
+  transform: scale(1.2);
+  opacity: .2;
+  cursor: pointer;
+}
+
+/* user */
+.user{
+  @apply absolute bottom-0 left-0 w-full p-1 leading-4 items-center justify-between hidden;
+}
+.card:hover .user {
+  display: flex
+}
+.user .userWrapper{
+  @apply flex items-center duration-150 hover:text-primary;
+}
+.user .openGif{
+  @apply text-gray-700 bg-primary rounded-sm px-2 py-1 duration-150 hover:opacity-80;
+}
+.user .avatar_url{
+  @apply rounded-full w-6 h-6 mr-1;
+}

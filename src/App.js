@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { GifGrid } from "./components/gifgrid/GifGrid";
+import { Navbar } from "./components/navbar/Navbar";
+import "./index.css";
 
 function App() {
+  const [categories, setCategories] = useState(["goku"]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code className="bg-red-700">src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar setCategories={setCategories} />
+      <div className="mt-20 px-4 xl:mx-auto max-w-screen-xl">
+        {categories.map((category) => (
+          <GifGrid key={category} category={category} />
+        ))}
+      </div>
+    </>
   );
 }
 
